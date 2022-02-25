@@ -1,24 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
+import Navbar from './Components/Navbar';
+import About from './Pages/About/About'
+import Skills from './Pages/Skills/Skills';
+import Projects from './Pages/Projects/Projects';
+import Contact from './Pages/Contact/Contact';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <>
+      <header>
+        <a id="title" href="">TaekJun's Portfolio</a>
+        <Navbar className="navbar" id="global-navbar" items={['Home', 'About', 'Skills', 'Projects', 'Contact']} />
       </header>
-    </div>
+      <About />
+      <Skills />
+      <Projects />
+      <Contact />
+    </>
   );
 }
 
